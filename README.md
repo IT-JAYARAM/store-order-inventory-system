@@ -1,120 +1,68 @@
-No bro — \*\*don't paste that version\*\*. 👍
-
-
-
-What you pasted has been converted/escaped by the chat formatting:
-
-
-
-\* `\\#` instead of `#`
-
-\* `\\\&` instead of `\&`
-
-\* `\\-` instead of `-`
-
-\* `store\\\_order\\\_app` instead of `store\_order\_app`
-
-\* `\&#x20;` inside JSON
-
-\* `\\\[` instead of `\[`
-
-\* `vendor\\\\bin\\\\phpunit` instead of `vendor\\bin\\phpunit`
-
-
-
-That would make the README look messy on GitHub.
-
-
-
-\### Do this instead
-
-
-
-Since you already deleted the file, I'll give you a \*\*cleaner, shorter README\*\* that is easier to paste.
-
-
-
-Open:
-
-
-
-```cmd
-
-notepad README.md
-
-```
-
-
-
-Then paste this exact content:
-
-
-
 ````markdown
 
-\# Store Order \& Inventory Mini-System
+\\# Store Order \\\& Inventory Mini-System
 
 
 
-A Laravel-based Store Order \& Inventory Mini-System developed as a take-home assignment.
+A Laravel-based Store Order \\\& Inventory Mini-System developed as a take-home assignment.
 
 
 
-\## Tech Stack
+\\## Tech Stack
 
 
 
-\- Laravel 13.4
+\\- Laravel 13.4
 
-\- PHP 8.3
+\\- PHP 8.3
 
-\- MySQL
+\\- MySQL
 
-\- Eloquent ORM
+\\- Eloquent ORM
 
-\- PHPUnit
+\\- PHPUnit
 
-\- REST APIs
+\\- REST APIs
 
-\- Queue Jobs
-
-
-
-\## Features
+\\- Queue Jobs
 
 
 
-\- Product management
-
-\- Customer management
-
-\- Order creation with multiple products
-
-\- Automatic subtotal, tax and grand total calculation
-
-\- Stock validation and deduction
-
-\- Transaction-safe order creation
-
-\- Concurrency-safe stock deduction
-
-\- Customer order history API
-
-\- Configurable low-stock API
-
-\- Queued order confirmation job
-
-\- Automated feature tests
-
-\- Database factories and seeders
+\\## Features
 
 
 
-\## Setup
+\\- Product management
+
+\\- Customer management
+
+\\- Order creation with multiple products
+
+\\- Automatic subtotal, tax and grand total calculation
+
+\\- Stock validation and deduction
+
+\\- Transaction-safe order creation
+
+\\- Concurrency-safe stock deduction
+
+\\- Customer order history API
+
+\\- Configurable low-stock API
+
+\\- Queued order confirmation job
+
+\\- Automated feature tests
+
+\\- Database factories and seeders
 
 
 
-\### 1. Install dependencies
+\\## Setup
+
+
+
+\\### 1. Install dependencies
 
 
 
@@ -136,7 +84,7 @@ Create a MySQL database named:
 
 ```text
 
-store\_order\_app
+store\\\_order\\\_app
 
 ```
 
@@ -148,17 +96,17 @@ Configure the database details in `.env`.
 
 ```env
 
-DB\_CONNECTION=mysql
+DB\\\_CONNECTION=mysql
 
-DB\_HOST=127.0.0.1
+DB\\\_HOST=127.0.0.1
 
-DB\_PORT=3306
+DB\\\_PORT=3306
 
-DB\_DATABASE=store\_order\_app
+DB\\\_DATABASE=store\\\_order\\\_app
 
-DB\_USERNAME=root
+DB\\\_USERNAME=root
 
-DB\_PASSWORD=
+DB\\\_PASSWORD=
 
 ```
 
@@ -236,25 +184,25 @@ Example request:
 
 {
 
-&#x20;   "customer": {
+\&#x20;   "customer": {
 
-&#x20;       "name": "Arun Kumar",
+\&#x20;       "name": "Arun Kumar",
 
-&#x20;       "email": "arun@example.com"
+\&#x20;       "email": "arun@example.com"
 
-&#x20;   },
+\&#x20;   },
 
-&#x20;   "items": \[
+\&#x20;   "items": \\\[
 
-&#x20;       {
+\&#x20;       {
 
-&#x20;           "product\_id": 1,
+\&#x20;           "product\\\_id": 1,
 
-&#x20;           "quantity": 2
+\&#x20;           "quantity": 2
 
-&#x20;       }
+\&#x20;       }
 
-&#x20;   ]
+\&#x20;   ]
 
 }
 
@@ -316,7 +264,7 @@ Default threshold is 5 and can be configured using:
 
 ```env
 
-LOW\_STOCK\_THRESHOLD=5
+LOW\\\_STOCK\\\_THRESHOLD=5
 
 ```
 
@@ -404,7 +352,7 @@ Run the automated tests:
 
 ```bash
 
-vendor\\bin\\phpunit
+vendor\\\\bin\\\\phpunit
 
 ```
 
@@ -542,7 +490,7 @@ Order creation and stock deduction are performed inside a database transaction.
 
 
 
-Product name, price and tax percentage are stored in `order\_items` so historical orders retain the original values even if the product changes later.
+Product name, price and tax percentage are stored in `order\\\_items` so historical orders retain the original values even if the product changes later.
 
 
 
@@ -577,6 +525,7 @@ Prompt evidence is included in the `prompts` directory as required by the assign
 
 
 ````
+
 
 
 

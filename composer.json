@@ -1,0 +1,27 @@
+{
+  "$schema": "https://getcomposer.org/schema.json",
+  "name": "mallow/store-order-inventory",
+  "type": "project",
+  "description": "Store Order & Inventory Mini-System - Laravel take-home assignment",
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^13.0",
+    "laravel/tinker": "^3.0"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.24",
+    "mockery/mockery": "^1.6",
+    "phpunit/phpunit": "^12.0"
+  },
+  "autoload": {
+    "psr-4": {"App\\": "app/", "Database\\Factories\\": "database/factories/", "Database\\Seeders\\": "database/seeders/"}
+  },
+  "autoload-dev": {"psr-4": {"Tests\\": "tests/"}},
+  "scripts": {
+    "post-autoload-dump": ["@php artisan package:discover --ansi"],
+    "test": "@php artisan test"
+  },
+  "extra": {"laravel": {"dont-discover": []}},
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
